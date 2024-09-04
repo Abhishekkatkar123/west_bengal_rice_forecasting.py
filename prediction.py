@@ -31,6 +31,7 @@ def prediction(periods):
     
     m = Prophet(yearly_seasonality=True, seasonality_prior_scale=0.1)
     m.fit(West_Bengal)
+    ##
     
     future = m.make_future_dataframe(periods=periods)
     forecast = m.predict(future)
